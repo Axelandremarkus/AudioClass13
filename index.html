@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clickable Sound Example</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h1>Class 13</h1>
+
+  <!-- Clickable word that triggers the embed when clicked -->
+  <p>
+    <a href="#" onclick="showAudio('Ambience'); return false;">
+      Ambience
+    </a>
+  </p>
+
+  <p>
+    <a href="#" onclick="showAudio('Input'); return false;">
+      Input
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Express yourself'); return false;">
+      Express yourself
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Grammar'); return false;">
+      Grammar
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Action 1'); return false;">
+      Action 1
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Action 2'); return false;">
+      Action 2
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Get inspired 1'); return false;">
+      Get inspired 1
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Get inspired 2'); return false;">
+      Get inspired 2
+    </a>
+  </p>
+
+
+  <!-- Embed code for SoundCloud (each embed is hidden initially) -->
+  <div id="Ambience" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/ambience-4&auto_play=true">
+    </iframe>
+  </div>
+
+  <div id="Input" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/ed72440c-db83-4211-9750-c07ffa8bf91f&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Express yourself" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/e610fddf-a7e0-4930-b47e-1301a5333fef&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Grammar" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/d2af45f5-a912-41b0-b4ac-ef817731727c&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Action 1" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/action-1-2&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Action 2" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/action-2-3&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get inspired 1" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/a50d0d03-bfb8-410d-b094-01923deef360&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get inspired 2" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/bbc5caa2-82dd-49b2-869d-ce300931eca0&auto_play=true">
+    </iframe>
+  </div>
+
+
+  <script>
+    function showAudio(word) {
+      // Hide all audio embeds
+      var allEmbeds = document.getElementsByClassName('audioEmbed');
+      for (var i = 0; i < allEmbeds.length; i++) {
+        allEmbeds[i].style.display = 'none';
+      }
+      
+      // Show the relevant audio embed
+      var audioEmbed = document.getElementById(word);
+      if (audioEmbed) {
+        audioEmbed.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
